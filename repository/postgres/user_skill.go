@@ -2,9 +2,9 @@ package postgres
 
 import (
 	"context"
-	"data-access-layer/config"
-	"data-access-layer/domain"
 	"fmt"
+	"github.com/dlankinl/bmstu-ppo-da/config"
+	"github.com/dlankinl/bmstu-ppo-da/domain"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"

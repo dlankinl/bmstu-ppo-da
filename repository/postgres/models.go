@@ -1,8 +1,8 @@
 package postgres
 
 import (
-	"data-access-layer/domain"
 	"database/sql"
+	"github.com/dlankinl/bmstu-ppo-da/domain"
 	"github.com/google/uuid"
 )
 

@@ -2,8 +2,8 @@ package postgres
 
 import (
 	"context"
-	"data-access-layer/domain"
 	"errors"
+	"github.com/dlankinl/bmstu-ppo-da/domain"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 	"testing"
