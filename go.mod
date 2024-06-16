@@ -1,6 +1,6 @@
 module github.com/dlankinl/bmstu-ppo-da
 
-go 1.21.1
+go 1.22.2
 
 require (
 	github.com/golang-migrate/migrate/v4 v4.17.1
