@@ -2,7 +2,7 @@ package postgres
 
 import (
 	"database/sql"
-	"github.com/dlankinl/bmstu-ppo-da/domain"
+	"github.com/dlankinl/bmstu-ppo-bl/domain"
 	"github.com/google/uuid"
 )
 

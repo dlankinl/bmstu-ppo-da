@@ -3,8 +3,9 @@ package postgres
 import (
 	"context"
 	"fmt"
+	"github.com/dlankinl/bmstu-ppo-bl/domain"
 	"github.com/dlankinl/bmstu-ppo-da/config"
-	"github.com/dlankinl/bmstu-ppo-da/domain"
+	repoDomain "github.com/dlankinl/bmstu-ppo-da/domain"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -14,7 +15,7 @@ type CompanyRepository struct {
 	db *pgxpool.Pool
 }
 
-func NewCompanyRepository(db *pgxpool.Pool) domain.ICompanyRepository {
+func NewCompanyRepository(db *pgxpool.Pool) repoDomain.ICompanyRepository {
 	return &CompanyRepository{
 		db: db,
 	}

@@ -2,6 +2,7 @@ package domain
 
 import (
 	"context"
+	"github.com/dlankinl/bmstu-ppo-bl/domain"
 
 	"github.com/google/uuid"
 )
@@ -15,6 +16,6 @@ type UserAuth struct {
 }
 
 type IAuthRepository interface {
-	Register(ctx context.Context, authInfo *UserAuth) (err error)
-	GetByUsername(ctx context.Context, username string) (*UserAuth, error)
+	Register(ctx context.Context, authInfo *domain.UserAuth) (err error)
+	GetByUsername(ctx context.Context, username string) (*domain.UserAuth, error)
 }

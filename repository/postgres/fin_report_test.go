@@ -3,7 +3,7 @@ package postgres
 import (
 	"context"
 	"errors"
-	"github.com/dlankinl/bmstu-ppo-da/domain"
+	"github.com/dlankinl/bmstu-ppo-bl/domain"
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 	"testing"

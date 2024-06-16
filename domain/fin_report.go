@@ -2,6 +2,7 @@ package domain
 
 import (
 	"context"
+	"github.com/dlankinl/bmstu-ppo-bl/domain"
 
 	"github.com/google/uuid"
 )
@@ -54,9 +55,9 @@ func (r *FinancialReportByPeriod) Profit() (sum float32) {
 }
 
 type IFinancialReportRepository interface {
-	Create(ctx context.Context, finRep *FinancialReport) error
-	GetById(ctx context.Context, id uuid.UUID) (*FinancialReport, error)
-	GetByCompany(ctx context.Context, companyId uuid.UUID, period *Period) (*FinancialReportByPeriod, error)
-	Update(ctx context.Context, finRep *FinancialReport) error
+	Create(ctx context.Context, finRep *domain.FinancialReport) error
+	GetById(ctx context.Context, id uuid.UUID) (*domain.FinancialReport, error)
+	GetByCompany(ctx context.Context, companyId uuid.UUID, period *domain.Period) (*domain.FinancialReportByPeriod, error)
+	Update(ctx context.Context, finRep *domain.FinancialReport) error
 	DeleteById(ctx context.Context, id uuid.UUID) error
 }

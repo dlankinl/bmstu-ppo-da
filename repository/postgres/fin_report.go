@@ -4,7 +4,8 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/dlankinl/bmstu-ppo-da/domain"
+	"github.com/dlankinl/bmstu-ppo-bl/domain"
+	repoDomain "github.com/dlankinl/bmstu-ppo-da/domain"
 	"github.com/google/uuid"
 	"github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
@@ -14,7 +15,7 @@ type FinReportRepository struct {
 	db *pgxpool.Pool
 }
 
-func NewFinReportRepository(db *pgxpool.Pool) domain.IFinancialReportRepository {
+func NewFinReportRepository(db *pgxpool.Pool) repoDomain.IFinancialReportRepository {
 	return &FinReportRepository{
 		db: db,
 	}

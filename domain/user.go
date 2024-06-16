@@ -2,6 +2,7 @@ package domain
 
 import (
 	"context"
+	"github.com/dlankinl/bmstu-ppo-bl/domain"
 	"time"
 
 	"github.com/google/uuid"
@@ -18,10 +19,10 @@ type User struct {
 }
 
 type IUserRepository interface {
-	Create(ctx context.Context, user *User) error
-	GetByUsername(ctx context.Context, username string) (*User, error)
-	GetById(ctx context.Context, userId uuid.UUID) (*User, error)
-	GetAll(ctx context.Context, page int) ([]*User, error)
-	Update(ctx context.Context, user *User) error
+	Create(ctx context.Context, user *domain.User) error
+	GetByUsername(ctx context.Context, username string) (*domain.User, error)
+	GetById(ctx context.Context, userId uuid.UUID) (*domain.User, error)
+	GetAll(ctx context.Context, page int) ([]*domain.User, error)
+	Update(ctx context.Context, user *domain.User) error
 	DeleteById(ctx context.Context, id uuid.UUID) error
 }

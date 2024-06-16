@@ -2,6 +2,7 @@ package domain
 
 import (
 	"context"
+	"github.com/dlankinl/bmstu-ppo-bl/domain"
 
 	"github.com/google/uuid"
 )
@@ -14,10 +15,10 @@ type ActivityField struct {
 }
 
 type IActivityFieldRepository interface {
-	Create(context.Context, *ActivityField) error
+	Create(context.Context, *domain.ActivityField) error
 	DeleteById(context.Context, uuid.UUID) error
-	Update(context.Context, *ActivityField) error
-	GetById(context.Context, uuid.UUID) (*ActivityField, error)
+	Update(context.Context, *domain.ActivityField) error
+	GetById(context.Context, uuid.UUID) (*domain.ActivityField, error)
 	GetMaxCost(context.Context) (float32, error)
-	GetAll(context.Context, int) ([]*ActivityField, error)
+	GetAll(context.Context, int) ([]*domain.ActivityField, error)
 }

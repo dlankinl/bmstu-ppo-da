@@ -3,7 +3,8 @@ package postgres
 import (
 	"context"
 	"fmt"
-	"github.com/dlankinl/bmstu-ppo-da/domain"
+	"github.com/dlankinl/bmstu-ppo-bl/domain"
+	repoDomain "github.com/dlankinl/bmstu-ppo-da/domain"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
@@ -11,7 +12,7 @@ type AuthRepository struct {
 	db *pgxpool.Pool
 }
 
-func NewAuthRepository(db *pgxpool.Pool) domain.IAuthRepository {
+func NewAuthRepository(db *pgxpool.Pool) repoDomain.IAuthRepository {
 	return &AuthRepository{
 		db: db,
 	}
