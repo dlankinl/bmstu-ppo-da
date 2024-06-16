@@ -1,4 +1,4 @@
-module bmstu-ppo-da
+module github.com/dlankinl/bmstu-ppo-da
 
 go 1.21.1
 
